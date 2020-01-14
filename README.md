@@ -2,6 +2,7 @@
 This is a barebones Alpine Linux based PgPool image. The purpose of the image is not be a universal PgPool image but instead one that can be used to implement a single endpoint for postgres installations with streamining replication that expose a seperate read-only endpoint. It is assumed that the read-replica endpoint might be backed by multiple instances and that the endpoint offers its own load balancing.
 
 The following environment variables have to be provided to the container:
+
 | Env Var | Description |
 | ------------- | ------------- |
 | MASTER_HOSTNAME | Hostname or ip-address of the master endpoint |
