@@ -1,6 +1,6 @@
-FROM alpine
+FROM debian:stable-slim
 
-RUN apk add --no-cache pgpool gettext postgresql-client
+RUN apt-get update && apt-get -y install pgpool2 gettext
 RUN mkdir /var/run/pgpool/
 
 COPY ./conf /etc/pgpool
